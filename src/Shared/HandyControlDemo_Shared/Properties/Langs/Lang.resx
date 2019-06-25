@@ -624,4 +624,7 @@
   <data name="Card" xml:space="preserve">
     <value>卡片</value>
   </data>
+  <data name="Cascader" xml:space="preserve">
+    <value>级联选择</value>
+  </data>
 </root>

@@ -275,6 +275,11 @@
                                 <Image Source="../../Resources/Img/LeftMainContent/DatePicker_16x.png"/>
                             </hc:EdgeElement.LeftContent>
                         </ListBoxItem>
+                        <ListBoxItem Style="{StaticResource ListBoxItemNew}" Tag="{x:Static data:MessageToken.CascaderDemoCtl}" Content="{x:Static langs:Lang.Cascader}">
+                            <hc:EdgeElement.LeftContent>
+                                <Image Source="../../Resources/Img/LeftMainContent/MeasureTree_16x.png"/>
+                            </hc:EdgeElement.LeftContent>
+                        </ListBoxItem>
                         <ListBoxItem Tag="{x:Static data:MessageToken.TransferDemoCtl}" Content="{x:Static langs:Lang.Transfer}">
                             <hc:EdgeElement.LeftContent>
                                 <Image Source="../../Resources/Img/LeftMainContent/Transfer_16x.png"/>
@@ -415,7 +420,7 @@
                                 <Image Source="../../Resources/Img/LeftMainContent/TabPage_16x.png"/>
                             </hc:EdgeElement.LeftContent>
                         </ListBoxItem>
-                        <ListBoxItem Style="{StaticResource ListBoxItemNew}" Tag="{x:Static data:MessageToken.SideMenuDemoCtl}" Content="{x:Static langs:Lang.SideMenu}">
+                        <ListBoxItem Tag="{x:Static data:MessageToken.SideMenuDemoCtl}" Content="{x:Static langs:Lang.SideMenu}">
                             <hc:EdgeElement.LeftContent>
                                 <Image Source="../../Resources/Img/LeftMainContent/MainMenuControl_16x.png"/>
                             </hc:EdgeElement.LeftContent>

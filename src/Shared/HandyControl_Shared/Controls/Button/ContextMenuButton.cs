@@ -1,6 +1,5 @@
 ﻿using System.Windows.Controls;
 
-
 namespace HandyControl.Controls
 {
     /// <summary>

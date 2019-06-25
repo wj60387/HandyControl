@@ -223,6 +223,15 @@ namespace HandyControlDemo.Properties.Langs {
         }
         
         /// <summary>
+        ///   查找类似 级联选择 的本地化字符串。
+        /// </summary>
+        public static string Cascader {
+            get {
+                return ResourceManager.GetString("Cascader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 是否重启以更改语言？ 的本地化字符串。
         /// </summary>
         public static string ChangeLangAsk {

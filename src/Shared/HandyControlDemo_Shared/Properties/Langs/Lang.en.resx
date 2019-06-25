@@ -624,4 +624,7 @@
   <data name="Card" xml:space="preserve">
     <value>Card</value>
   </data>
+  <data name="Cascader" xml:space="preserve">
+    <value>Cascader</value>
+  </data>
 </root>
