@@ -4,6 +4,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="BaseStyle.xaml"/>
+        <ResourceDictionary Source="../../Basic/Sizes.xaml"/>
         <ResourceDictionary Source="../../Basic/Converters.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
@@ -12,7 +13,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
         <Setter Property="Focusable" Value="False"/>
-        <Setter Property="controls:BorderElement.CornerRadius" Value="4"/>
+        <Setter Property="controls:BorderElement.CornerRadius" Value="{StaticResource DefaultCornerRadius}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="controls:Card">

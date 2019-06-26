@@ -2,8 +2,8 @@
 
 namespace HandyControl.Controls
 {
-    public class Cascader : Control
+    public class CascaderView : Control
     {
-        
+
     }
 }
