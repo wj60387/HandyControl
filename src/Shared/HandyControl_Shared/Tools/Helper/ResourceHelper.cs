@@ -47,7 +47,7 @@ namespace HandyControl.Tools
                 return resource;
             }
 
-            return default(T);
+            return default;
         }
 
         /// <summary>
@@ -71,19 +71,21 @@ namespace HandyControl.Tools
         {
             try
             {
-                var uri = new Uri($"pack://application:,,,/{assembly.GetName().Name};component/{themePath}/Skin{skin.ToString()}.xaml");
                 return new ResourceDictionary
                 {
-                    Source = uri
+                    Source = MakePackUri(assembly, $"{themePath}/Skin{skin.ToString()}.xaml")
                 };
             }
             catch
             {
                 return new ResourceDictionary
                 {
-                    Source = new Uri($"pack://application:,,,/{assembly.GetName().Name};component/{themePath}/Skin{SkinType.Default.ToString()}.xaml")
+                    Source = MakePackUri(assembly, $"{themePath}/Skin{SkinType.Default.ToString()}.xaml")
                 };
             }        
         }
+
+        public static Uri MakePackUri(Assembly assembly, string path) =>
+            new Uri($"pack://application:,,,/{assembly.GetName().Name};component/{path}", UriKind.Absolute);
     }
 }

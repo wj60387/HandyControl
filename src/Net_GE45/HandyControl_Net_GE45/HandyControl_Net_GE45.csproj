@@ -171,6 +171,56 @@
       <Link>Resources\dropper.cur</Link>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\bottom.png">
+      <Link>Resources\bottom.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\bottomleft.png">
+      <Link>Resources\bottomleft.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\bottomright.png">
+      <Link>Resources\bottomright.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\cornerbottomleft.png">
+      <Link>Resources\cornerbottomleft.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\cornerbottomright.png">
+      <Link>Resources\cornerbottomright.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\cornertopleft.png">
+      <Link>Resources\cornertopleft.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\cornertopright.png">
+      <Link>Resources\cornertopright.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\left.png">
+      <Link>Resources\left.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\leftbottom.png">
+      <Link>Resources\leftbottom.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\lefttop.png">
+      <Link>Resources\lefttop.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\right.png">
+      <Link>Resources\right.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\rightbottom.png">
+      <Link>Resources\rightbottom.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\righttop.png">
+      <Link>Resources\righttop.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\top.png">
+      <Link>Resources\top.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\topleft.png">
+      <Link>Resources\topleft.png</Link>
+    </Resource>
+    <Resource Include="..\..\Shared\HandyControl_Shared\Resources\topright.png">
+      <Link>Resources\topright.png</Link>
+    </Resource>
+  </ItemGroup>
   <Import Project="..\..\Shared\HandyControl_Shared\HandyControl_Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

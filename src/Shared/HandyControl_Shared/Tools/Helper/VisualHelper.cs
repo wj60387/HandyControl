@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Windows;
 using System.Windows.Media;
-using HandyControl.Tools.Interop;
 using HandyControl.Tools.Extension;
+using HandyControl.Tools.Interop;
 
 namespace HandyControl.Tools
 {
-    public class VisualHelper
+    public static class VisualHelper
     {
         internal static VisualStateGroup TryGetVisualStateGroup(DependencyObject d, string groupName)
         {
@@ -181,6 +181,30 @@ namespace HandyControl.Tools
 #else
                 return WindowResizeBorderThickness.Add(new Thickness(4));
 #endif
+            }
+        }
+
+        private static HitTestFilterBehavior ExcludeNonVisualElements(DependencyObject potentialHitTestTarget)
+        {
+            if (!(potentialHitTestTarget is Visual))
+                return HitTestFilterBehavior.ContinueSkipSelfAndChildren;
+            return !(potentialHitTestTarget is UIElement uiElement) || uiElement.IsVisible && uiElement.IsEnabled ? HitTestFilterBehavior.Continue : HitTestFilterBehavior.ContinueSkipSelfAndChildren;
+        }
+
+        public static void HitTestVisibleElements(Visual visual, HitTestResultCallback resultCallback,
+            HitTestParameters parameters) =>
+            VisualTreeHelper.HitTest(visual, ExcludeNonVisualElements, resultCallback, parameters);
+
+        public static DependencyObject GetVisualOrLogicalParent(this DependencyObject sourceElement)
+        {
+            switch (sourceElement)
+            {
+                case null:
+                    return null;
+                case Visual _:
+                    return VisualTreeHelper.GetParent(sourceElement) ?? LogicalTreeHelper.GetParent(sourceElement);
+                default:
+                    return LogicalTreeHelper.GetParent(sourceElement);
             }
         }
     }
